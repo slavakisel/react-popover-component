@@ -1,0 +1,189 @@
+$react-popover-component-font-color: #000 !default;
+$react-popover-component-border-color: #9b9b9b !default;
+$react-popover-component-border-radius: 4px !default;
+
+@mixin add-arrow($position: top, $side: left) {
+  $opposite: bottom !default;
+  $horizontal: $side !default;
+
+  @if $position == bottom { $opposite: top; }
+  @if $position == left { $opposite: right; }
+  @if $position == right { $opposite: left; }
+
+  // Stroke
+  &:before {
+    #{$position}: -11px;
+    border-#{$opposite}-color: $react-popover-component-border-color;
+    border-#{$position}: 0;
+    border-width: 11px;
+    @if $side == center {
+      transform: translateX(-50%);
+      left: 50%;
+    } @else {
+      #{$horizontal}: 21px;
+    }
+  }
+
+  // Fill
+  &:after {
+    #{$position}: -8px;
+    border-#{$opposite}-color: #fff;
+    border-#{$position}: 0;
+    border-width: 10px;
+    @if $side == center {
+      transform: translateX(-50%);
+      left: 50%;
+    } @else {
+      #{$horizontal}: 22px;
+    }
+  }
+}
+
+.react-popover-container {
+  position: relative;
+  width: 100%;
+}
+
+.react-popover {
+  background: #fff;
+  color: $react-popover-component-font-color;
+  display: block;
+  font-family: inherit;
+  font-weight: normal;
+  position: absolute;
+  top: 0;
+  z-index: 8;
+  border: 2px solid $react-popover-component-border-color;
+  border-radius: $react-popover-component-border-radius;
+
+  .react-popover-wrapper {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: rem-calc(18 20 24);
+    padding-bottom: 1.25rem;
+    text-align: left;
+
+    p {
+      margin-bottom: 0;
+    }
+    .button {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .react-popover-close {
+    color: $react-popover-component-font-color !important;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: .5 !important;
+    position: absolute;
+    text-decoration: none;
+    top: 3px;
+    right: 3px;
+
+    &:hover,
+    &:focus {
+      color: $react-popover-component-font-color !important;
+    }
+  }
+
+  .react-popover-cancel {
+    margin-top: 5px;
+  }
+
+  .react-popover-cta {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+
+  .heading {
+    color: $react-popover-component-font-color;
+    margin-bottom: .5rem;
+  }
+
+  // Popover with arrow
+  &.arrow {
+    // generic style for arrow
+    &:before,
+    &:after {
+      border-color: transparent;
+      border-style: solid;
+      content: '';
+      height: 0;
+      position: absolute;
+      width: 0;
+    }
+
+    &.arrow-bottom-right {
+      @include add-arrow(bottom, right);
+    }
+
+    &.arrow-bottom-left {
+      @include add-arrow(bottom, left);
+    }
+
+    &.arrow-top-right {
+      @include add-arrow(top, right);
+    }
+
+    &.arrow-top-left {
+      @include add-arrow(top, left);
+    }
+
+    &.arrow-left-top {
+      @include add-arrow(left, top);
+    }
+
+    &.arrow-left-bottom {
+      @include add-arrow(left, bottom);
+    }
+
+    &.arrow-right-top {
+      @include add-arrow(right, top);
+    }
+
+    &.arrow-right-bottom {
+      @include add-arrow(right, bottom);
+    }
+
+    &.arrow-top-center {
+      @include add-arrow(top, center);
+    }
+
+    &.arrow-bottom-center {
+      @include add-arrow(bottom, center);
+    }
+
+    // TODO:
+    &.arrow-left-center {
+      @include add-arrow(left, center);
+    }
+
+    // TODO:
+    &.arrow-right-center {
+      @include add-arrow(right, center);
+    }
+  }
+}
+
+.react-popover-body {
+  // make the clickable target area no larger than the child
+  display: inline-block;
+  position: relative;
+  width: 100%;
+
+  .react-popover-target-wrapper {
+    display: inline-block;
+  }
+}
+
+// Styles for screens that are at least 768px;
+@media screen and (min-height: 768px) {
+  .react-popover {
+    width: 300px;
+    float: inherit;
+  }
+}

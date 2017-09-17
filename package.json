@@ -1,0 +1,61 @@
+{
+  "name": "react-popover-component",
+  "version": "0.0.1",
+  "description": "React popover component",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slavakisel/react-popover-component.git"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "popover"
+  ],
+  "author": "Slava Kisel <letitbe400@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/slavakisel/react-popover-component/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^2.30.1",
+    "path": "^0.12.7",
+    "standard-version": "^4.2.0",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.7.1",
+    "enzyme": "^2.8.2",
+    "jest": "^20.0.4",
+    "jest-serializer-enzyme": "^1.0.0",
+    "react-test-renderer": "^15.5.4",
+    "sinon": "^2.3.5",
+    "sass-loader": "^6.0.6",
+    "node-sass": "^4.5.3",
+    "typescript": "^2.5.2",
+    "ts-loader": "^2.3.7",
+    "@types/node": "^8.0.22",
+    "@types/react": "^16.0.2",
+    "react-dom": "^15.6.1"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-onclickoutside": "^6.5.0"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/jest-serializer-enzyme"
+    ]
+  },
+  "scripts": {
+    "test": "jest react-test",
+    "build": "webpack --config webpack.config.js",
+    "build:demo": "webpack --config webpack.demo.config.js",
+    "compile": "npm run build && npm run build:demo",
+    "release": "standard-version",
+    "serve": "webpack-dev-server --config webpack.demo.config.js"
+  }
+}
