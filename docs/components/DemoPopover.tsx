@@ -8,7 +8,7 @@ class DemoPopover extends PureComponent<any> {
       <div className="demo__wrapper">
         <div className="demo__container">
           <Popover
-            target={(<div>Click me!</div>)}
+            target={(<div className="demo__target">Click me!</div>)}
             style={{width: "180px"}}
             {...this.props}
           >

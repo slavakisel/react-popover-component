@@ -6,5 +6,10 @@
 
   button {
     flex: 0 0 32%;
+    background-color: #fff;
+
+    &.active {
+      background-color: #eee;
+    }
   }
 }

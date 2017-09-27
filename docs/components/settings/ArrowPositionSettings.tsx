@@ -29,7 +29,11 @@ class ArrowPositionSettings extends Component<IProps, IState> {
       <div className="arrow-settings">
         {
           Arrows.map((a, i) => (
-            <button key={i} onClick={() => this.onChange(a)}>{a}</button>
+            <button key={i}
+              className={a == this.state.value ? "active" : ""}
+              onClick={() => this.onChange(a)}>
+              {a}
+            </button>
           ))
         }
       </div>

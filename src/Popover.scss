@@ -16,11 +16,20 @@ $react-popover-component-border-radius: 4px !default;
     border-#{$opposite}-color: $react-popover-component-border-color;
     border-#{$position}: 0;
     border-width: 11px;
-    @if $side == center {
-      transform: translateX(-50%);
-      left: 50%;
-    } @else {
+    @if $side != center {
       #{$horizontal}: 21px;
+    }
+  }
+
+  &:before, &:after {
+    @if $side == center {
+      @if $position == bottom or $position == top {
+        transform: translateX(-50%);
+        left: 50%;
+      } @else {
+        transform: translateY(-50%);
+        top: 50%;
+      }
     }
   }
 
@@ -30,10 +39,7 @@ $react-popover-component-border-radius: 4px !default;
     border-#{$opposite}-color: #fff;
     border-#{$position}: 0;
     border-width: 10px;
-    @if $side == center {
-      transform: translateX(-50%);
-      left: 50%;
-    } @else {
+    @if $side != center {
       #{$horizontal}: 22px;
     }
   }

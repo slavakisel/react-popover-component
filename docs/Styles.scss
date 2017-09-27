@@ -1,9 +1,15 @@
 .demo {
   &__wrapper {
-    padding: 100px;
     border: 1px solid #ddd;
     display: flex;
+    align-items: center;
     justify-content: center;
+    height: 200px;
+    width: 100%;
+  }
+
+  &__target {
+    border: 1px solid #ddd;
   }
 
   &__container {

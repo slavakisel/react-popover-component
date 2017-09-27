@@ -28,10 +28,14 @@ class TransformCalculator {
       case 'bottomRight':
       case 'bottomLeft':
         return this.container.clientWidth / 2;
+      case 'leftTop':
+      case 'leftCenter':
+      case 'leftBottom':
+        return this.container.clientWidth;
       case 'rightTop':
       case 'rightCenter':
       case 'rightBottom':
-        return -8;
+        return 0;
       default:
         return 0;
     }
@@ -45,6 +49,7 @@ class TransformCalculator {
         return this.container.clientHeight;
       case 'leftCenter':
       case 'rightCenter':
+        return -this.container.clientHeight;
       case 'leftTop':
       case 'leftBottom':
       case 'rightTop':
