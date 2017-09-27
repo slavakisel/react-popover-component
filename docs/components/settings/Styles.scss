@@ -1,0 +1,10 @@
+.arrow-settings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+
+  button {
+    flex: 0 0 32%;
+  }
+}

@@ -1,0 +1,12 @@
+.demo {
+  &__wrapper {
+    padding: 100px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__container {
+    display: 'inline-block';
+  }
+}

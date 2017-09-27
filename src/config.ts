@@ -49,16 +49,18 @@ const config = {
 };
 
 export const Arrows = [
-  'topRight',
   'topLeft',
-  'bottomRight',
-  'bottomLeft',
+  'topCenter',
+  'topRight',
   'leftTop',
+  'leftCenter',
   'leftBottom',
   'rightTop',
+  'rightCenter',
   'rightBottom',
-  'topCenter',
-  'bottomCenter'
+  'bottomRight',
+  'bottomCenter',
+  'bottomLeft',
 ];
 
 export default config;

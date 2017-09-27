@@ -19,6 +19,7 @@ module.exports = {
     extensions: ['.js', '.ts', '.tsx'],
     alias: {
       'react-popover-component/dist/styles.css': path.resolve('./src/Popover.scss'),
+      'react-popover-component/src': path.resolve('./src/'),
       'react-popover-component': path.resolve('./src/Popover.tsx')
     }
   },
