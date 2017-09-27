@@ -10,16 +10,16 @@ class TransformCalculator {
   }
 
   // Can't use css calc() here because it does not work poperly inside translate() in IE
-  translateX = () => {
+  translateX = (): string => {
     return `translateX(${this.targetTranslateX()}) translateX(${this.containerTranslateX()}px)`;
   }
 
   // Can't use css calc() here because it does not work poperly inside translate() in IE
-  translateY = () => {
+  translateY = (): string => {
     return `translateY(${this.targetTranslateY()}) translateY(${this.containerTranslateY()}px)`;
   }
 
-  containerTranslateX = () => {
+  containerTranslateX = (): number => {
     switch (this.arrowPosition) {
       case 'topCenter':
       case 'topRight':
@@ -37,7 +37,7 @@ class TransformCalculator {
     }
   }
 
-  containerTranslateY = () => {
+  containerTranslateY = (): number => {
     switch (this.arrowPosition) {
       case 'topCenter':
       case 'topLeft':
@@ -54,11 +54,11 @@ class TransformCalculator {
     }
   }
 
-  targetTranslateX = () => {
+  targetTranslateX = (): string => {
     return config.left[this.arrowPosition];
   }
 
-  targetTranslateY = () => {
+  targetTranslateY = (): string => {
     return config.top[this.arrowPosition];
   }
 }

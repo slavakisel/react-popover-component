@@ -3,7 +3,7 @@ import onClickOutside from 'react-onclickoutside';
 import config, { Arrows } from './config';
 import TransformCalculator from './transform-calculator';
 
-import { IProps, IState } from './types';
+import { IProps, IState, IViewport } from './types';
 
 class Popover extends Component<IProps, IState> {
   public static defaultProps: Partial<IProps> = {
@@ -28,77 +28,71 @@ class Popover extends Component<IProps, IState> {
     };
   }
 
-  handleClickOutside = evt => {
+  handleClickOutside = (evt): void => {
     if (this.props.closeOnOutsideClick) this.close();
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps: IProps): void {
     if('open' in nextProps) {
       this.setState({ open: nextProps.open });
     }
   }
 
-  componentDidMount() {
+  componentDidMount(): void {
     window.addEventListener('keyup', this.onEscapeKey, false);
     window.addEventListener('resize', this.handleResize);
     this.setState({ viewport: this.viewport() });
   }
 
-  componentWillUnmount() {
+  componentWillUnmount(): void {
     window.removeEventListener('keyup', this.onEscapeKey, false);
     window.removeEventListener('resize', this.handleResize);
   }
 
-  viewport = () => {
+  viewport = (): IViewport => {
     return {
       width: window.innerWidth,
       height: window.innerHeight
     };
   }
 
-  handleResize = () => {
+  handleResize = (): void => {
     const viewport = this.viewport();
     this.setState({ viewport });
   }
 
-  onEscapeKey = (e) => {
-    if (e.key === 'Escape') {
-      this.close();
-    }
+  onEscapeKey = (e): void => {
+    if (e.key === 'Escape') this.close();
   }
 
-  onTargetClick = () => {
+  onTargetClick = (): void => {
     if (!this.props.toggable) return;
     this.state.open ? this.close() : this.open();
   }
 
-  onCancelClick = (e) => {
+  onCancelClick = (e): void => {
     e.preventDefault();
     this.close();
   }
 
-  setDefaultArrowClass() {
+  setDefaultArrowClass(): string {
     const { arrowPosition } = this.props;
     return config.popOverStyles[arrowPosition] || config.popOverStyles.default;
   }
 
-  open = () => {
-    this.setState({ open: true });
-  }
+  open = (): void => this.setState({ open: true });
 
-  close = () => {
-    this.setState({ open: false });
-  }
+  close = (): void => this.setState({ open: false });
 
-  containerWidth = () => {
+  containerWidth = (): string => {
     return this.container.clientWidth + 'px';
   }
 
-  containerOffsets = () => {
+  containerOffsets = (): ClientRect => {
     return this.container.getBoundingClientRect();
   }
 
-  widthInsideViewport = () => {
+  widthInsideViewport = (): string => {
     const { width } = this.props.style;
     const { viewport } = this.state;
 
@@ -119,13 +113,13 @@ class Popover extends Component<IProps, IState> {
     return width;
   }
 
-  transform = () => {
+  transform = (): TransformCalculator => {
     if (!this._transform) this._transform = new TransformCalculator(this.props.arrowPosition, this.container);
 
     return this._transform;
   }
 
-  transformStyle = () => {
+  transformStyle = (): string => {
     const { left, top } = this.props;
 
     const x = left ? `translateX(${left})` : this.transform().translateX();
@@ -146,7 +140,7 @@ class Popover extends Component<IProps, IState> {
     return { ...style, transform };
   }
 
-  renderCloseButton() {
+  renderCloseButton(): JSX.Element|null {
     if (!this.props.hasCloseButton) return null;
 
     return (
@@ -156,7 +150,7 @@ class Popover extends Component<IProps, IState> {
     );
   }
 
-  renderCancelLink() {
+  renderCancelLink(): JSX.Element|null {
     if (!this.props.hasCancelLink) return null;
 
     return (
@@ -166,7 +160,7 @@ class Popover extends Component<IProps, IState> {
     );
   }
 
-  renderPopoverBody() {
+  renderPopoverBody(): JSX.Element|null {
     const { children, actionButton } = this.props;
 
     const arrowClass = this.setDefaultArrowClass();
@@ -189,11 +183,11 @@ class Popover extends Component<IProps, IState> {
     );
   }
 
-  setupContainer = (ref) => {
+  setupContainer = (ref): void => {
     if (ref) this.container = ref;
   }
 
-  render() {
+  render(): JSX.Element {
     const { className, target } = this.props;
 
     return (

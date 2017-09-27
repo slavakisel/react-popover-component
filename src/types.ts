@@ -58,10 +58,12 @@ export interface IProps {
   className: string,
 };
 
+export interface IViewport {
+  width: number,
+  height: number
+}
+
 export interface IState {
   open: boolean,
-  viewport?: {
-    width: number,
-    height: number
-  }
+  viewport?: IViewport
 };
