@@ -9,3 +9,4 @@
 !*.md
 !LICENSE
 !yarn.lock
+src/__tests__/**/*

@@ -7,9 +7,6 @@
     "type": "git",
     "url": "git+https://github.com/slavakisel/react-popover-component.git"
   },
-  "scripts": {
-    "test": "jest"
-  },
   "keywords": [
     "react",
     "popover"
