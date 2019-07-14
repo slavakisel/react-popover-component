@@ -22464,7 +22464,7 @@ module.exports = ReactDOMInvalidARIAHook;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_popover_component_src_config__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_config__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Styles_scss__ = __webpack_require__(189);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Styles_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Styles_scss__);
 var __extends = (this && this.__extends) || (function () {
@@ -22495,7 +22495,7 @@ var ArrowPositionSettings = /** @class */ (function (_super) {
     ;
     ArrowPositionSettings.prototype.render = function () {
         var _this = this;
-        return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "arrow-settings" }, __WEBPACK_IMPORTED_MODULE_1_react_popover_component_src_config__["a" /* Arrows */].map(function (a, i) { return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", { key: i, className: a == _this.state.value ? "active" : "", onClick: function () { return _this.onChange(a); } }, a)); })));
+        return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "arrow-settings" }, __WEBPACK_IMPORTED_MODULE_1__src_config__["a" /* Arrows */].map(function (a, i) { return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("button", { key: i, className: a == _this.state.value ? "active" : "", onClick: function () { return _this.onChange(a); } }, a)); })));
     };
     return ArrowPositionSettings;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));

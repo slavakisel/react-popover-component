@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Arrows} from 'react-popover-component/src/config';
+import {Arrows} from '../../../src/config';
 
 import './Styles.scss';
 
