@@ -22616,7 +22616,12 @@ var Popover = /** @class */ (function (_super) {
             _this.close();
         };
         _this.open = function () { return _this.setState({ open: true }); };
-        _this.close = function () { return _this.setState({ open: false }); };
+        _this.close = function () {
+            _this.setState({ open: false });
+            if (_this.props.onClose) {
+                _this.props.onClose();
+            }
+        };
         _this.containerWidth = function () {
             return _this.container.clientWidth + 'px';
         };
@@ -22726,7 +22731,8 @@ var Popover = /** @class */ (function (_super) {
         style: {},
         open: false,
         toggable: true,
-        closeOnOutsideClick: true
+        closeOnOutsideClick: true,
+        onClose: undefined
     };
     return Popover;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
