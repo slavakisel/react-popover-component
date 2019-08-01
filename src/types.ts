@@ -56,6 +56,10 @@ export interface IProps {
    * Additional css class to apply on the whole component
   */
   className: string,
+  /**
+   * Function to call when popover is closed
+   */
+  onClose: Function
 };
 
 export interface IViewport {
