@@ -97,4 +97,16 @@ describe('Popover', () => {
 
     expect(wrapper.update().find('.react-popover').node).toBeFalsy();
   });
+
+  it('calls onClose function', () => {
+    const onClose = sinon.spy();
+    componentProps.onClose = onClose;
+
+    component = React.createElement(Popover, componentProps);
+    wrapper = mount(component);
+
+    wrapper.find('.btn-delete').simulate('click');
+
+    expect(onClose.callCount).toBe(1);
+  });
 });

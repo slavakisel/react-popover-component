@@ -14,7 +14,8 @@ class Popover extends Component<IProps, IState> {
     style: {},
     open: false,
     toggable: true,
-    closeOnOutsideClick: true
+    closeOnOutsideClick: true,
+    onClose: undefined
   };
 
   private container: HTMLDivElement;
@@ -82,7 +83,11 @@ class Popover extends Component<IProps, IState> {
 
   open = (): void => this.setState({ open: true });
 
-  close = (): void => this.setState({ open: false });
+  close = (): void => {
+    this.setState({ open: false });
+
+    if (this.props.onClose) { this.props.onClose() }
+  }
 
   containerWidth = (): string => {
     return this.container.clientWidth + 'px';
