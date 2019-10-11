@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import sinon from 'sinon';
 import { mount } from 'enzyme';
 import Popover from '../Popover';
@@ -101,6 +101,7 @@ describe('Popover', () => {
   it('calls onClose function', () => {
     const onClose = sinon.spy();
     componentProps.onClose = onClose;
+    componentProps.open = true;
 
     component = React.createElement(Popover, componentProps);
     wrapper = mount(component);

@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import * as React from 'react';
+import { Component } from 'react';
 import onClickOutside from 'react-onclickoutside';
 import config, { Arrows } from './config';
 import TransformCalculator from './transform-calculator';
@@ -174,7 +175,7 @@ class Popover extends Component<IProps, IState> {
     return (
       <div
         className={`react-popover arrow ${arrowClass}`}
-        style={this.popoverStyles()}
+        style={{...this.popoverStyles()}}
       >
         <div className="react-popover-wrapper">
           {children}

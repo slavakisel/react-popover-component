@@ -1,0 +1,811 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Popover popover body transform propery otherwise renders popover with correct transform style 1`] = `
+<OnClickOutside(Popover)
+  actionButton={
+    <button
+      className="btn-confirm-delete"
+      onClick={[Function]}
+    >
+      delete
+    </button>
+  }
+  arrowPosition="rightBottom"
+  eventTypes={
+    Array [
+      "mousedown",
+      "touchstart",
+    ]
+  }
+  excludeScrollbar={false}
+  hasCancelLink={true}
+  hasCloseButton={true}
+  left="200px"
+  open={true}
+  outsideClickIgnoreClass="ignore-react-onclickoutside"
+  preventDefault={false}
+  stopPropagation={false}
+  target={
+    <button
+      className="btn-delete"
+      onClick={[Function]}
+    >
+      delete
+    </button>
+  }
+  top="100px"
+>
+  <Popover
+    actionButton={
+      <button
+        className="btn-confirm-delete"
+        onClick={[Function]}
+      >
+        delete
+      </button>
+    }
+    arrowPosition="rightBottom"
+    closeOnOutsideClick={true}
+    disableOnClickOutside={[Function]}
+    enableOnClickOutside={[Function]}
+    eventTypes={
+      Array [
+        "mousedown",
+        "touchstart",
+      ]
+    }
+    hasCancelLink={true}
+    hasCloseButton={true}
+    left="200px"
+    open={true}
+    outsideClickIgnoreClass="ignore-react-onclickoutside"
+    preventDefault={false}
+    stopPropagation={false}
+    style={
+      Object {
+        "width": "0px",
+      }
+    }
+    target={
+      <button
+        className="btn-delete"
+        onClick={[Function]}
+      >
+        delete
+      </button>
+    }
+    toggable={true}
+    top="100px"
+  >
+    <div
+      className="react-popover-container undefined"
+    >
+      <div
+        className="react-popover-body"
+      >
+        <div
+          className="react-popover-target-wrapper"
+          onClick={[Function]}
+        >
+          <button
+            className="btn-delete"
+            onClick={[Function]}
+          >
+            delete
+          </button>
+        </div>
+        <div
+          className="react-popover arrow arrow-right-bottom"
+          style={
+            Object {
+              "transform": "translateX(200px) translateY(100px)",
+              "width": "0px",
+            }
+          }
+        >
+          <div
+            className="react-popover-wrapper"
+          >
+            <p>
+              popover message
+            </p>
+            <div
+              className="react-popover-cta"
+            >
+              <button
+                className="btn-confirm-delete"
+                onClick={[Function]}
+              >
+                delete
+              </button>
+              <a
+                className="react-popover-cancel"
+                href=""
+                onClick={[Function]}
+              >
+                Cancel
+              </a>
+            </div>
+            <a
+              className="react-popover-close"
+              href=""
+              onClick={[Function]}
+            >
+              <span
+                className="fa fa-close"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Popover>
+</OnClickOutside(Popover)>
+`;
+
+exports[`Popover popover body transform propery when arrowPosition is topCenter renders popover with correct transform style 1`] = `
+<OnClickOutside(Popover)
+  actionButton={
+    <button
+      className="btn-confirm-delete"
+      onClick={[Function]}
+    >
+      delete
+    </button>
+  }
+  arrowPosition="topCenter"
+  eventTypes={
+    Array [
+      "mousedown",
+      "touchstart",
+    ]
+  }
+  excludeScrollbar={false}
+  hasCancelLink={true}
+  hasCloseButton={true}
+  left="200px"
+  open={true}
+  outsideClickIgnoreClass="ignore-react-onclickoutside"
+  preventDefault={false}
+  stopPropagation={false}
+  target={
+    <button
+      className="btn-delete"
+      onClick={[Function]}
+    >
+      delete
+    </button>
+  }
+  top="100px"
+>
+  <Popover
+    actionButton={
+      <button
+        className="btn-confirm-delete"
+        onClick={[Function]}
+      >
+        delete
+      </button>
+    }
+    arrowPosition="topCenter"
+    closeOnOutsideClick={true}
+    disableOnClickOutside={[Function]}
+    enableOnClickOutside={[Function]}
+    eventTypes={
+      Array [
+        "mousedown",
+        "touchstart",
+      ]
+    }
+    hasCancelLink={true}
+    hasCloseButton={true}
+    left="200px"
+    open={true}
+    outsideClickIgnoreClass="ignore-react-onclickoutside"
+    preventDefault={false}
+    stopPropagation={false}
+    style={
+      Object {
+        "width": "0px",
+      }
+    }
+    target={
+      <button
+        className="btn-delete"
+        onClick={[Function]}
+      >
+        delete
+      </button>
+    }
+    toggable={true}
+    top="100px"
+  >
+    <div
+      className="react-popover-container undefined"
+    >
+      <div
+        className="react-popover-body"
+      >
+        <div
+          className="react-popover-target-wrapper"
+          onClick={[Function]}
+        >
+          <button
+            className="btn-delete"
+            onClick={[Function]}
+          >
+            delete
+          </button>
+        </div>
+        <div
+          className="react-popover arrow arrow-top-center"
+          style={
+            Object {
+              "transform": "translateX(200px) translateY(100px)",
+              "width": "0px",
+            }
+          }
+        >
+          <div
+            className="react-popover-wrapper"
+          >
+            <p>
+              popover message
+            </p>
+            <div
+              className="react-popover-cta"
+            >
+              <button
+                className="btn-confirm-delete"
+                onClick={[Function]}
+              >
+                delete
+              </button>
+              <a
+                className="react-popover-cancel"
+                href=""
+                onClick={[Function]}
+              >
+                Cancel
+              </a>
+            </div>
+            <a
+              className="react-popover-close"
+              href=""
+              onClick={[Function]}
+            >
+              <span
+                className="fa fa-close"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Popover>
+</OnClickOutside(Popover)>
+`;
+
+exports[`Popover popover body transform propery when arrowPosition is topRight renders popover with correct transform style 1`] = `
+<OnClickOutside(Popover)
+  actionButton={
+    <button
+      className="btn-confirm-delete"
+      onClick={[Function]}
+    >
+      delete
+    </button>
+  }
+  arrowPosition="topRight"
+  eventTypes={
+    Array [
+      "mousedown",
+      "touchstart",
+    ]
+  }
+  excludeScrollbar={false}
+  hasCancelLink={true}
+  hasCloseButton={true}
+  left="200px"
+  open={true}
+  outsideClickIgnoreClass="ignore-react-onclickoutside"
+  preventDefault={false}
+  stopPropagation={false}
+  target={
+    <button
+      className="btn-delete"
+      onClick={[Function]}
+    >
+      delete
+    </button>
+  }
+  top="100px"
+>
+  <Popover
+    actionButton={
+      <button
+        className="btn-confirm-delete"
+        onClick={[Function]}
+      >
+        delete
+      </button>
+    }
+    arrowPosition="topRight"
+    closeOnOutsideClick={true}
+    disableOnClickOutside={[Function]}
+    enableOnClickOutside={[Function]}
+    eventTypes={
+      Array [
+        "mousedown",
+        "touchstart",
+      ]
+    }
+    hasCancelLink={true}
+    hasCloseButton={true}
+    left="200px"
+    open={true}
+    outsideClickIgnoreClass="ignore-react-onclickoutside"
+    preventDefault={false}
+    stopPropagation={false}
+    style={
+      Object {
+        "width": "0px",
+      }
+    }
+    target={
+      <button
+        className="btn-delete"
+        onClick={[Function]}
+      >
+        delete
+      </button>
+    }
+    toggable={true}
+    top="100px"
+  >
+    <div
+      className="react-popover-container undefined"
+    >
+      <div
+        className="react-popover-body"
+      >
+        <div
+          className="react-popover-target-wrapper"
+          onClick={[Function]}
+        >
+          <button
+            className="btn-delete"
+            onClick={[Function]}
+          >
+            delete
+          </button>
+        </div>
+        <div
+          className="react-popover arrow arrow-top-right"
+          style={
+            Object {
+              "transform": "translateX(200px) translateY(100px)",
+              "width": "0px",
+            }
+          }
+        >
+          <div
+            className="react-popover-wrapper"
+          >
+            <p>
+              popover message
+            </p>
+            <div
+              className="react-popover-cta"
+            >
+              <button
+                className="btn-confirm-delete"
+                onClick={[Function]}
+              >
+                delete
+              </button>
+              <a
+                className="react-popover-cancel"
+                href=""
+                onClick={[Function]}
+              >
+                Cancel
+              </a>
+            </div>
+            <a
+              className="react-popover-close"
+              href=""
+              onClick={[Function]}
+            >
+              <span
+                className="fa fa-close"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Popover>
+</OnClickOutside(Popover)>
+`;
+
+exports[`Popover renders the popover with hide class applied by default 1`] = `
+<OnClickOutside(Popover)
+  actionButton={
+    <button
+      className="btn-confirm-delete"
+      onClick={[Function]}
+    >
+      delete
+    </button>
+  }
+  arrowPosition="bottomRight"
+  eventTypes={
+    Array [
+      "mousedown",
+      "touchstart",
+    ]
+  }
+  excludeScrollbar={false}
+  hasCancelLink={true}
+  hasCloseButton={true}
+  left="200px"
+  outsideClickIgnoreClass="ignore-react-onclickoutside"
+  preventDefault={false}
+  stopPropagation={false}
+  target={
+    <button
+      className="btn-delete"
+      onClick={[Function]}
+    >
+      delete
+    </button>
+  }
+  top="100px"
+>
+  <Popover
+    actionButton={
+      <button
+        className="btn-confirm-delete"
+        onClick={[Function]}
+      >
+        delete
+      </button>
+    }
+    arrowPosition="bottomRight"
+    closeOnOutsideClick={true}
+    disableOnClickOutside={[Function]}
+    enableOnClickOutside={[Function]}
+    eventTypes={
+      Array [
+        "mousedown",
+        "touchstart",
+      ]
+    }
+    hasCancelLink={true}
+    hasCloseButton={true}
+    left="200px"
+    open={false}
+    outsideClickIgnoreClass="ignore-react-onclickoutside"
+    preventDefault={false}
+    stopPropagation={false}
+    style={Object {}}
+    target={
+      <button
+        className="btn-delete"
+        onClick={[Function]}
+      >
+        delete
+      </button>
+    }
+    toggable={true}
+    top="100px"
+  >
+    <div
+      className="react-popover-container undefined"
+    >
+      <div
+        className="react-popover-body"
+      >
+        <div
+          className="react-popover-target-wrapper"
+          onClick={[Function]}
+        >
+          <button
+            className="btn-delete"
+            onClick={[Function]}
+          >
+            delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </Popover>
+</OnClickOutside(Popover)>
+`;
+
+exports[`Popover renders the popover without the hide class when open props is passed in 1`] = `
+<OnClickOutside(Popover)
+  actionButton={
+    <button
+      className="btn-confirm-delete"
+      onClick={[Function]}
+    >
+      delete
+    </button>
+  }
+  arrowPosition="bottomRight"
+  eventTypes={
+    Array [
+      "mousedown",
+      "touchstart",
+    ]
+  }
+  excludeScrollbar={false}
+  hasCancelLink={true}
+  hasCloseButton={true}
+  left="200px"
+  open={true}
+  outsideClickIgnoreClass="ignore-react-onclickoutside"
+  preventDefault={false}
+  stopPropagation={false}
+  target={
+    <button
+      className="btn-delete"
+      onClick={[Function]}
+    >
+      delete
+    </button>
+  }
+  top="100px"
+>
+  <Popover
+    actionButton={
+      <button
+        className="btn-confirm-delete"
+        onClick={[Function]}
+      >
+        delete
+      </button>
+    }
+    arrowPosition="bottomRight"
+    closeOnOutsideClick={true}
+    disableOnClickOutside={[Function]}
+    enableOnClickOutside={[Function]}
+    eventTypes={
+      Array [
+        "mousedown",
+        "touchstart",
+      ]
+    }
+    hasCancelLink={true}
+    hasCloseButton={true}
+    left="200px"
+    open={true}
+    outsideClickIgnoreClass="ignore-react-onclickoutside"
+    preventDefault={false}
+    stopPropagation={false}
+    style={
+      Object {
+        "width": "0px",
+      }
+    }
+    target={
+      <button
+        className="btn-delete"
+        onClick={[Function]}
+      >
+        delete
+      </button>
+    }
+    toggable={true}
+    top="100px"
+  >
+    <div
+      className="react-popover-container undefined"
+    >
+      <div
+        className="react-popover-body"
+      >
+        <div
+          className="react-popover-target-wrapper"
+          onClick={[Function]}
+        >
+          <button
+            className="btn-delete"
+            onClick={[Function]}
+          >
+            delete
+          </button>
+        </div>
+        <div
+          className="react-popover arrow arrow-bottom-right"
+          style={
+            Object {
+              "transform": "translateX(200px) translateY(100px)",
+              "width": "0px",
+            }
+          }
+        >
+          <div
+            className="react-popover-wrapper"
+          >
+            <p>
+              popover message
+            </p>
+            <div
+              className="react-popover-cta"
+            >
+              <button
+                className="btn-confirm-delete"
+                onClick={[Function]}
+              >
+                delete
+              </button>
+              <a
+                className="react-popover-cancel"
+                href=""
+                onClick={[Function]}
+              >
+                Cancel
+              </a>
+            </div>
+            <a
+              className="react-popover-close"
+              href=""
+              onClick={[Function]}
+            >
+              <span
+                className="fa fa-close"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Popover>
+</OnClickOutside(Popover)>
+`;
+
+exports[`Popover renders with different arrowPosition 1`] = `
+<OnClickOutside(Popover)
+  actionButton={
+    <button
+      className="btn-confirm-delete"
+      onClick={[Function]}
+    >
+      delete
+    </button>
+  }
+  arrowPosition="leftTop"
+  eventTypes={
+    Array [
+      "mousedown",
+      "touchstart",
+    ]
+  }
+  excludeScrollbar={false}
+  hasCancelLink={true}
+  hasCloseButton={true}
+  left="200px"
+  open={true}
+  outsideClickIgnoreClass="ignore-react-onclickoutside"
+  preventDefault={false}
+  stopPropagation={false}
+  target={
+    <button
+      className="btn-delete"
+      onClick={[Function]}
+    >
+      delete
+    </button>
+  }
+  top="100px"
+>
+  <Popover
+    actionButton={
+      <button
+        className="btn-confirm-delete"
+        onClick={[Function]}
+      >
+        delete
+      </button>
+    }
+    arrowPosition="leftTop"
+    closeOnOutsideClick={true}
+    disableOnClickOutside={[Function]}
+    enableOnClickOutside={[Function]}
+    eventTypes={
+      Array [
+        "mousedown",
+        "touchstart",
+      ]
+    }
+    hasCancelLink={true}
+    hasCloseButton={true}
+    left="200px"
+    open={true}
+    outsideClickIgnoreClass="ignore-react-onclickoutside"
+    preventDefault={false}
+    stopPropagation={false}
+    style={
+      Object {
+        "width": "0px",
+      }
+    }
+    target={
+      <button
+        className="btn-delete"
+        onClick={[Function]}
+      >
+        delete
+      </button>
+    }
+    toggable={true}
+    top="100px"
+  >
+    <div
+      className="react-popover-container undefined"
+    >
+      <div
+        className="react-popover-body"
+      >
+        <div
+          className="react-popover-target-wrapper"
+          onClick={[Function]}
+        >
+          <button
+            className="btn-delete"
+            onClick={[Function]}
+          >
+            delete
+          </button>
+        </div>
+        <div
+          className="react-popover arrow arrow-left-top"
+          style={
+            Object {
+              "transform": "translateX(200px) translateY(100px)",
+              "width": "0px",
+            }
+          }
+        >
+          <div
+            className="react-popover-wrapper"
+          >
+            <p>
+              popover message
+            </p>
+            <div
+              className="react-popover-cta"
+            >
+              <button
+                className="btn-confirm-delete"
+                onClick={[Function]}
+              >
+                delete
+              </button>
+              <a
+                className="react-popover-cancel"
+                href=""
+                onClick={[Function]}
+              >
+                Cancel
+              </a>
+            </div>
+            <a
+              className="react-popover-close"
+              href=""
+              onClick={[Function]}
+            >
+              <span
+                className="fa fa-close"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Popover>
+</OnClickOutside(Popover)>
+`;

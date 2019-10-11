@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from "react";
 import { mount } from 'enzyme';
 import Popover from '../Popover';
 
@@ -40,7 +40,7 @@ describe('Popover', () => {
   });
 
   describe('popover body transform propery', () => {
-    context('when arrowPosition is topCenter', () => {
+    describe('when arrowPosition is topCenter', () => {
       beforeEach(() => {
         props = { ...props, arrowPosition: 'topCenter' };
       });
@@ -51,7 +51,7 @@ describe('Popover', () => {
       });
     });
 
-    context('when arrowPosition is topRight', () => {
+    describe('when arrowPosition is topRight', () => {
       beforeEach(() => {
         props = { ...props, arrowPosition: 'topRight' };
       });
@@ -62,7 +62,7 @@ describe('Popover', () => {
       });
     });
 
-    context('otherwise', () => {
+    describe('otherwise', () => {
       beforeEach(() => {
         props = { ...props, arrowPosition: 'rightBottom' };
       });

@@ -14,9 +14,7 @@ module.exports = {
     loaders: [
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader?' + JSON.stringify({
-          configFile: 'tsbuild.json'
-        }),
+        loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
