@@ -1328,6 +1328,16 @@ module.exports = ReactUpdates;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+module.exports = __webpack_require__(16);
+
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -1593,16 +1603,6 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
     undefined !== 'production' ? warning(warningCondition, "This synthetic event is reused for performance reasons. If you're seeing this, " + "you're %s `%s` on a released/nullified synthetic event. %s. " + 'If you must keep the original synthetic event around, use event.persist(). ' + 'See https://fb.me/react-event-pooling for more information.', action, propName, result) : void 0;
   }
 }
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = __webpack_require__(16);
-
 
 /***/ }),
 /* 13 */
@@ -3191,7 +3191,7 @@ module.exports = EventPluginHub;
 
 
 
-var SyntheticEvent = __webpack_require__(11);
+var SyntheticEvent = __webpack_require__(12);
 
 var getEventTarget = __webpack_require__(36);
 
@@ -6543,70 +6543,56 @@ module.exports = getEventCharCode;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Arrows; });
 var config = {
-    popOverStyles: {
-        topRight: 'arrow-top-right',
-        topLeft: 'arrow-top-left',
-        topCenter: 'arrow-top-center',
-        bottomRight: 'arrow-bottom-right',
-        bottomLeft: 'arrow-bottom-left',
-        bottomCenter: 'arrow-bottom-center',
-        leftTop: 'arrow-left-top',
-        leftCenter: 'arrow-left-center',
-        leftBottom: 'arrow-left-bottom',
-        rightTop: 'arrow-right-top',
-        rightCenter: 'arrow-right-center',
-        rightBottom: 'arrow-right-bottom',
-        default: 'arrow-bottom-right',
-    },
-    left: {
-        topCenter: '-50%',
-        topRight: '-90.9%',
-        topLeft: '-10%',
-        bottomCenter: '-50%',
-        bottomRight: '-90.9%',
-        bottomLeft: '-10%',
-        leftTop: '5%',
-        leftCenter: '5%',
-        leftBottom: '5%',
-        rightTop: '-105%',
-        rightCenter: '-105%',
-        rightBottom: '-105%',
-    },
-    top: {
-        topLeft: '10%',
-        topCenter: '10%',
-        topRight: '10%',
-        bottomRight: '-110%',
-        bottomLeft: '-110%',
-        bottomCenter: '-110%',
-        leftTop: '-90%',
-        leftCenter: '0',
-        leftBottom: '-10%',
-        rightTop: '90%',
-        rightCenter: '0',
-        rightBottom: '-10%',
-        default: '-100%',
-    },
-    warnings: {
-        missingContent: 'Write some children elements to render content in the Popover',
-    }
+  popOverStyles: {
+    topRight: 'arrow-top-right',
+    topLeft: 'arrow-top-left',
+    topCenter: 'arrow-top-center',
+    bottomRight: 'arrow-bottom-right',
+    bottomLeft: 'arrow-bottom-left',
+    bottomCenter: 'arrow-bottom-center',
+    leftTop: 'arrow-left-top',
+    leftCenter: 'arrow-left-center',
+    leftBottom: 'arrow-left-bottom',
+    rightTop: 'arrow-right-top',
+    rightCenter: 'arrow-right-center',
+    rightBottom: 'arrow-right-bottom',
+    "default": 'arrow-bottom-right'
+  },
+  left: {
+    topCenter: '-50%',
+    topRight: '-90.9%',
+    topLeft: '-10%',
+    bottomCenter: '-50%',
+    bottomRight: '-90.9%',
+    bottomLeft: '-10%',
+    leftTop: '5%',
+    leftCenter: '5%',
+    leftBottom: '5%',
+    rightTop: '-105%',
+    rightCenter: '-105%',
+    rightBottom: '-105%'
+  },
+  top: {
+    topLeft: '10%',
+    topCenter: '10%',
+    topRight: '10%',
+    bottomRight: '-110%',
+    bottomLeft: '-110%',
+    bottomCenter: '-110%',
+    leftTop: '-10%',
+    leftCenter: '0',
+    leftBottom: '-50%',
+    rightTop: '-10%',
+    rightCenter: '0',
+    rightBottom: '-50%',
+    "default": '-100%'
+  },
+  warnings: {
+    missingContent: 'Write some children elements to render content in the Popover'
+  }
 };
-var Arrows = [
-    'topLeft',
-    'topCenter',
-    'topRight',
-    'leftTop',
-    'leftCenter',
-    'leftBottom',
-    'rightTop',
-    'rightCenter',
-    'rightBottom',
-    'bottomLeft',
-    'bottomCenter',
-    'bottomRight',
-];
+var Arrows = ['topLeft', 'topCenter', 'topRight', 'leftTop', 'leftCenter', 'leftBottom', 'rightTop', 'rightCenter', 'rightBottom', 'bottomLeft', 'bottomCenter', 'bottomRight'];
 /* harmony default export */ __webpack_exports__["b"] = (config);
-
 
 /***/ }),
 /* 51 */
@@ -9799,7 +9785,7 @@ module.exports = __webpack_require__(85);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
@@ -9809,24 +9795,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Styles_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Styles_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_settings_ArrowPositionSettings__ = __webpack_require__(188);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_DemoPopover__ = __webpack_require__(190);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
 
 
 
@@ -9834,36 +9821,57 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 
 
 ;
-var App = /** @class */ (function (_super) {
-    __extends(App, _super);
-    function App(props) {
-        var _this = _super.call(this, props) || this;
-        _this.state = {
-            arrowPosition: 'bottomCenter',
-            open: true,
-            key: Date.now(),
-        };
-        return _this;
-    }
-    App.prototype.popover = function () {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__components_DemoPopover__["a" /* default */], __assign({}, this.state));
-    };
-    ;
-    App.prototype.settings = function () {
-        var _this = this;
-        return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_settings_ArrowPositionSettings__["a" /* default */], { value: this.state.arrowPosition, onChange: function (arrowPosition) { return _this.setState({ arrowPosition: arrowPosition, key: Date.now() }); } })));
-    };
-    App.prototype.render = function () {
-        return (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", null,
-            this.settings(),
-            this.popover()));
-    };
-    ;
-    return App;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
-__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(App, null), document.getElementById('examples'));
 
+var App =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(App, _Component);
+
+  function App(props) {
+    var _this;
+
+    _classCallCheck(this, App);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
+    _this.state = {
+      arrowPosition: 'bottomCenter',
+      open: true,
+      key: Date.now()
+    };
+    return _this;
+  }
+
+  _createClass(App, [{
+    key: "popover",
+    value: function popover() {
+      return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_5__components_DemoPopover__["a" /* default */], this.state);
+    }
+  }, {
+    key: "settings",
+    value: function settings() {
+      var _this2 = this;
+
+      return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", null, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_4__components_settings_ArrowPositionSettings__["a" /* default */], {
+        value: this.state.arrowPosition,
+        onChange: function onChange(arrowPosition) {
+          return _this2.setState({
+            arrowPosition: arrowPosition,
+            key: Date.now()
+          });
+        }
+      }));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", null, this.settings(), this.popover());
+    }
+  }]);
+
+  return App;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](App, null), document.getElementById('examples'));
 
 /***/ }),
 /* 86 */
@@ -13114,7 +13122,7 @@ module.exports = FallbackCompositionState;
 
 
 
-var SyntheticEvent = __webpack_require__(11);
+var SyntheticEvent = __webpack_require__(12);
 
 /**
  * @interface Event
@@ -13155,7 +13163,7 @@ module.exports = SyntheticCompositionEvent;
 
 
 
-var SyntheticEvent = __webpack_require__(11);
+var SyntheticEvent = __webpack_require__(12);
 
 /**
  * @interface Event
@@ -13202,7 +13210,7 @@ var EventPropagators = __webpack_require__(20);
 var ExecutionEnvironment = __webpack_require__(5);
 var ReactDOMComponentTree = __webpack_require__(4);
 var ReactUpdates = __webpack_require__(10);
-var SyntheticEvent = __webpack_require__(11);
+var SyntheticEvent = __webpack_require__(12);
 
 var inputValueTracking = __webpack_require__(65);
 var getEventTarget = __webpack_require__(36);
@@ -20983,7 +20991,7 @@ var EventPropagators = __webpack_require__(20);
 var ExecutionEnvironment = __webpack_require__(5);
 var ReactDOMComponentTree = __webpack_require__(4);
 var ReactInputSelection = __webpack_require__(80);
-var SyntheticEvent = __webpack_require__(11);
+var SyntheticEvent = __webpack_require__(12);
 
 var getActiveElement = __webpack_require__(81);
 var isTextInputElement = __webpack_require__(66);
@@ -21180,7 +21188,7 @@ var EventPropagators = __webpack_require__(20);
 var ReactDOMComponentTree = __webpack_require__(4);
 var SyntheticAnimationEvent = __webpack_require__(167);
 var SyntheticClipboardEvent = __webpack_require__(168);
-var SyntheticEvent = __webpack_require__(11);
+var SyntheticEvent = __webpack_require__(12);
 var SyntheticFocusEvent = __webpack_require__(169);
 var SyntheticKeyboardEvent = __webpack_require__(170);
 var SyntheticMouseEvent = __webpack_require__(29);
@@ -21403,7 +21411,7 @@ module.exports = SimpleEventPlugin;
 
 
 
-var SyntheticEvent = __webpack_require__(11);
+var SyntheticEvent = __webpack_require__(12);
 
 /**
  * @interface Event
@@ -21447,7 +21455,7 @@ module.exports = SyntheticAnimationEvent;
 
 
 
-var SyntheticEvent = __webpack_require__(11);
+var SyntheticEvent = __webpack_require__(12);
 
 /**
  * @interface Event
@@ -21828,7 +21836,7 @@ module.exports = SyntheticTouchEvent;
 
 
 
-var SyntheticEvent = __webpack_require__(11);
+var SyntheticEvent = __webpack_require__(12);
 
 /**
  * @interface Event
@@ -22462,47 +22470,87 @@ module.exports = ReactDOMInvalidARIAHook;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_config__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Styles_scss__ = __webpack_require__(189);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Styles_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Styles_scss__);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
 
 ;
-var ArrowPositionSettings = /** @class */ (function (_super) {
-    __extends(ArrowPositionSettings, _super);
-    function ArrowPositionSettings(props) {
-        var _this = _super.call(this, props) || this;
-        _this.onChange = function (value) {
-            _this.setState({ value: value });
-            _this.props.onChange(value);
-        };
-        _this.state = { value: props.value };
-        return _this;
-    }
-    ;
-    ArrowPositionSettings.prototype.render = function () {
-        var _this = this;
-        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "arrow-settings" }, __WEBPACK_IMPORTED_MODULE_1__src_config__["a" /* Arrows */].map(function (a, i) { return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("button", { key: i, className: a == _this.state.value ? "active" : "", onClick: function () { return _this.onChange(a); } }, a)); })));
+
+var ArrowPositionSettings =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(ArrowPositionSettings, _Component);
+
+  function ArrowPositionSettings(props) {
+    var _this;
+
+    _classCallCheck(this, ArrowPositionSettings);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ArrowPositionSettings).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_this), "onChange", function (value) {
+      _this.setState({
+        value: value
+      });
+
+      _this.props.onChange(value);
+    });
+
+    _this.state = {
+      value: props.value
     };
-    return ArrowPositionSettings;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
+    return _this;
+  }
+
+  _createClass(ArrowPositionSettings, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", {
+        className: "arrow-settings"
+      }, __WEBPACK_IMPORTED_MODULE_1__src_config__["a" /* Arrows */].map(function (a, i) {
+        return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("button", {
+          key: i,
+          className: a == _this2.state.value ? "active" : "",
+          onClick: function onClick() {
+            return _this2.onChange(a);
+          }
+        }, a);
+      }));
+    }
+  }]);
+
+  return ArrowPositionSettings;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
 ;
 /* harmony default export */ __webpack_exports__["a"] = (ArrowPositionSettings);
-
 
 /***/ }),
 /* 189 */
@@ -22515,233 +22563,341 @@ var ArrowPositionSettings = /** @class */ (function (_super) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_popover_component__ = __webpack_require__(191);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+var DemoPopover =
+/*#__PURE__*/
+function (_PureComponent) {
+  _inherits(DemoPopover, _PureComponent);
+
+  function DemoPopover() {
+    _classCallCheck(this, DemoPopover);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(DemoPopover).apply(this, arguments));
+  }
+
+  _createClass(DemoPopover, [{
+    key: "render",
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", {
+        className: "demo__wrapper"
+      }, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", {
+        className: "demo__container"
+      }, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_popover_component__["a" /* default */], _extends({
+        target: __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", {
+          className: "demo__target"
+        }, "Click me!"),
+        style: {
+          width: "180px"
+        }
+      }, this.props), "Lorem ipsum dolor sit amet.")));
     }
-    return t;
-};
+  }]);
 
+  return DemoPopover;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["PureComponent"]);
 
-
-var DemoPopover = /** @class */ (function (_super) {
-    __extends(DemoPopover, _super);
-    function DemoPopover() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    DemoPopover.prototype.render = function () {
-        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "demo__wrapper" },
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "demo__container" },
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1_react_popover_component__["a" /* default */], __assign({ target: (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "demo__target" }, "Click me!")), style: { width: "180px" } }, this.props), "Lorem ipsum dolor sit amet."))));
-    };
-    return DemoPopover;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["PureComponent"]));
 /* harmony default export */ __webpack_exports__["a"] = (DemoPopover);
-
 
 /***/ }),
 /* 191 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_onclickoutside__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__transform_calculator__ = __webpack_require__(194);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+var Popover =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Popover, _Component);
+
+  function Popover(props) {
+    var _this;
+
+    _classCallCheck(this, Popover);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Popover).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_this), "container", void 0);
+
+    _defineProperty(_assertThisInitialized(_this), "_transform", void 0);
+
+    _defineProperty(_assertThisInitialized(_this), "handleClickOutside", function (evt) {
+      if (_this.props.closeOnOutsideClick) _this.close();
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "viewport", function () {
+      return {
+        width: window.innerWidth,
+        height: window.innerHeight
+      };
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "handleResize", function () {
+      var viewport = _this.viewport();
+
+      _this.setState({
+        viewport: viewport
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "onEscapeKey", function (e) {
+      if (e.key === 'Escape') _this.close();
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "onTargetClick", function () {
+      if (!_this.props.toggable) return;
+      _this.state.open ? _this.close() : _this.open();
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "onCancelClick", function (e) {
+      e.preventDefault();
+
+      _this.close();
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "open", function () {
+      return _this.setState({
+        open: true
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "close", function () {
+      _this.setState({
+        open: false
+      });
+
+      if (_this.props.onClose) {
+        _this.props.onClose();
+      }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "containerWidth", function () {
+      return _this.container.clientWidth + 'px';
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "containerOffsets", function () {
+      return _this.container.getBoundingClientRect();
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "widthInsideViewport", function () {
+      var width = _this.props.style.width;
+      var viewport = _this.state.viewport;
+      if (!width || !viewport) return _this.containerWidth();
+      var elementWidth = parseInt(width.replace('px', ''));
+
+      var offsets = _this.containerOffsets();
+
+      switch (_this.props.arrowPosition) {
+        case 'topCenter':
+        case 'bottomCenter':
+          var elementLeft = _this.transform().containerTranslateX();
+
+          var actualWidth = offsets.left + elementLeft + elementWidth / 2;
+          if (actualWidth > viewport.width) return _this.containerWidth();
+          break;
+      }
+
+      return width;
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "transform", function () {
+      if (!_this._transform) _this._transform = new __WEBPACK_IMPORTED_MODULE_3__transform_calculator__["a" /* default */](_this.props.arrowPosition, _this.container);
+      return _this._transform;
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "transformStyle", function () {
+      var _this$props = _this.props,
+          left = _this$props.left,
+          top = _this$props.top;
+      var x = left ? "translateX(".concat(left, ")") : _this.transform().translateX();
+      var y = top ? "translateY(".concat(top, ")") : _this.transform().translateY();
+      return "".concat(x, " ").concat(y);
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "setupContainer", function (ref) {
+      if (ref) _this.container = ref;
+    });
+
+    _this.state = {
+      open: props.open
     };
-})();
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
+    return _this;
+  }
+
+  _createClass(Popover, [{
+    key: "componentWillReceiveProps",
+    value: function componentWillReceiveProps(nextProps) {
+      if ('open' in nextProps) {
+        this.setState({
+          open: nextProps.open
+        });
+      }
     }
-    return t;
-};
-
-
-
-
-
-var Popover = /** @class */ (function (_super) {
-    __extends(Popover, _super);
-    function Popover(props) {
-        var _this = _super.call(this, props) || this;
-        _this.handleClickOutside = function (evt) {
-            if (_this.props.closeOnOutsideClick)
-                _this.close();
-        };
-        _this.viewport = function () {
-            return {
-                width: window.innerWidth,
-                height: window.innerHeight
-            };
-        };
-        _this.handleResize = function () {
-            var viewport = _this.viewport();
-            _this.setState({ viewport: viewport });
-        };
-        _this.onEscapeKey = function (e) {
-            if (e.key === 'Escape')
-                _this.close();
-        };
-        _this.onTargetClick = function () {
-            if (!_this.props.toggable)
-                return;
-            _this.state.open ? _this.close() : _this.open();
-        };
-        _this.onCancelClick = function (e) {
-            e.preventDefault();
-            _this.close();
-        };
-        _this.open = function () { return _this.setState({ open: true }); };
-        _this.close = function () {
-            _this.setState({ open: false });
-            if (_this.props.onClose) {
-                _this.props.onClose();
-            }
-        };
-        _this.containerWidth = function () {
-            return _this.container.clientWidth + 'px';
-        };
-        _this.containerOffsets = function () {
-            return _this.container.getBoundingClientRect();
-        };
-        _this.widthInsideViewport = function () {
-            var width = _this.props.style.width;
-            var viewport = _this.state.viewport;
-            if (!width || !viewport)
-                return _this.containerWidth();
-            var elementWidth = parseInt(width.replace('px', ''));
-            var offsets = _this.containerOffsets();
-            switch (_this.props.arrowPosition) {
-                case 'topCenter':
-                case 'bottomCenter':
-                    var elementLeft = _this.transform().containerTranslateX();
-                    var actualWidth = offsets.left + elementLeft + elementWidth / 2;
-                    if (actualWidth > viewport.width)
-                        return _this.containerWidth();
-                    break;
-            }
-            return width;
-        };
-        _this.transform = function () {
-            if (!_this._transform)
-                _this._transform = new __WEBPACK_IMPORTED_MODULE_3__transform_calculator__["a" /* default */](_this.props.arrowPosition, _this.container);
-            return _this._transform;
-        };
-        _this.transformStyle = function () {
-            var _a = _this.props, left = _a.left, top = _a.top;
-            var x = left ? "translateX(" + left + ")" : _this.transform().translateX();
-            var y = top ? "translateY(" + top + ")" : _this.transform().translateY();
-            return x + " " + y;
-        };
-        _this.setupContainer = function (ref) {
-            if (ref)
-                _this.container = ref;
-        };
-        _this.state = {
-            open: props.open
-        };
-        return _this;
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.addEventListener('keyup', this.onEscapeKey, false);
+      window.addEventListener('resize', this.handleResize);
+      this.setState({
+        viewport: this.viewport()
+      });
     }
-    Popover.prototype.componentWillReceiveProps = function (nextProps) {
-        if ('open' in nextProps) {
-            this.setState({ open: nextProps.open });
-        }
-    };
-    Popover.prototype.componentDidMount = function () {
-        window.addEventListener('keyup', this.onEscapeKey, false);
-        window.addEventListener('resize', this.handleResize);
-        this.setState({ viewport: this.viewport() });
-    };
-    Popover.prototype.componentWillUnmount = function () {
-        window.removeEventListener('keyup', this.onEscapeKey, false);
-        window.removeEventListener('resize', this.handleResize);
-    };
-    Popover.prototype.setDefaultArrowClass = function () {
-        var arrowPosition = this.props.arrowPosition;
-        return __WEBPACK_IMPORTED_MODULE_2__config__["b" /* default */].popOverStyles[arrowPosition] || __WEBPACK_IMPORTED_MODULE_2__config__["b" /* default */].popOverStyles.default;
-    };
-    Popover.prototype.popoverStyles = function () {
-        var style = this.props.style;
-        if (!this.container)
-            return style;
-        style.width = this.widthInsideViewport();
-        var transform = this.transformStyle();
-        return __assign({}, style, { transform: transform });
-    };
-    Popover.prototype.renderCloseButton = function () {
-        if (!this.props.hasCloseButton)
-            return null;
-        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("a", { className: "react-popover-close", href: "", onClick: this.onCancelClick },
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("span", { className: "fa fa-close" })));
-    };
-    Popover.prototype.renderCancelLink = function () {
-        if (!this.props.hasCancelLink)
-            return null;
-        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("a", { className: "react-popover-cancel", href: "", onClick: this.onCancelClick }, "Cancel"));
-    };
-    Popover.prototype.renderPopoverBody = function () {
-        var _a = this.props, children = _a.children, actionButton = _a.actionButton;
-        var arrowClass = this.setDefaultArrowClass();
-        if (!this.state.open)
-            return null;
-        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "react-popover arrow " + arrowClass, style: __assign({}, this.popoverStyles()) },
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "react-popover-wrapper" },
-                children,
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: !!actionButton ? "react-popover-cta" : "" },
-                    actionButton,
-                    this.renderCancelLink()),
-                this.renderCloseButton())));
-    };
-    Popover.prototype.render = function () {
-        var _a = this.props, className = _a.className, target = _a.target;
-        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "react-popover-container " + className, ref: this.setupContainer },
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "react-popover-body" },
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "react-popover-target-wrapper", onClick: this.onTargetClick }, target),
-                this.renderPopoverBody())));
-    };
-    Popover.defaultProps = {
-        children: (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", null, __WEBPACK_IMPORTED_MODULE_2__config__["b" /* default */].warnings.missingContent)),
-        arrowPosition: 'bottomCenter',
-        hasCloseButton: false,
-        hasCancelLink: false,
-        style: {},
-        open: false,
-        toggable: true,
-        closeOnOutsideClick: true,
-        onClose: undefined
-    };
-    return Popover;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      window.removeEventListener('keyup', this.onEscapeKey, false);
+      window.removeEventListener('resize', this.handleResize);
+    }
+  }, {
+    key: "setDefaultArrowClass",
+    value: function setDefaultArrowClass() {
+      var arrowPosition = this.props.arrowPosition;
+      return __WEBPACK_IMPORTED_MODULE_2__config__["b" /* default */].popOverStyles[arrowPosition] || __WEBPACK_IMPORTED_MODULE_2__config__["b" /* default */].popOverStyles["default"];
+    }
+  }, {
+    key: "popoverStyles",
+    value: function popoverStyles() {
+      var style = this.props.style;
+      if (!this.container) return style;
+      style.width = this.widthInsideViewport();
+      var transform = this.transformStyle();
+      return _objectSpread({}, style, {
+        transform: transform
+      });
+    }
+  }, {
+    key: "renderCloseButton",
+    value: function renderCloseButton() {
+      if (!this.props.hasCloseButton) return null;
+      return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("a", {
+        className: "react-popover-close",
+        href: "",
+        onClick: this.onCancelClick
+      }, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("span", {
+        className: "fa fa-close"
+      }));
+    }
+  }, {
+    key: "renderCancelLink",
+    value: function renderCancelLink() {
+      if (!this.props.hasCancelLink) return null;
+      return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("a", {
+        className: "react-popover-cancel",
+        href: "",
+        onClick: this.onCancelClick
+      }, "Cancel");
+    }
+  }, {
+    key: "renderPopoverBody",
+    value: function renderPopoverBody() {
+      var _this$props2 = this.props,
+          children = _this$props2.children,
+          actionButton = _this$props2.actionButton;
+      var arrowClass = this.setDefaultArrowClass();
+      if (!this.state.open) return null;
+      return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", {
+        className: "react-popover arrow ".concat(arrowClass),
+        style: _objectSpread({}, this.popoverStyles())
+      }, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", {
+        className: "react-popover-wrapper"
+      }, children, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", {
+        className: !!actionButton ? "react-popover-cta" : ""
+      }, actionButton, this.renderCancelLink()), this.renderCloseButton()));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props3 = this.props,
+          className = _this$props3.className,
+          target = _this$props3.target;
+      return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", {
+        className: "react-popover-container ".concat(className),
+        ref: this.setupContainer
+      }, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", {
+        className: "react-popover-body"
+      }, __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", {
+        className: "react-popover-target-wrapper",
+        onClick: this.onTargetClick
+      }, target), this.renderPopoverBody()));
+    }
+  }]);
+
+  return Popover;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+_defineProperty(Popover, "defaultProps", {
+  children: __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", null, __WEBPACK_IMPORTED_MODULE_2__config__["b" /* default */].warnings.missingContent),
+  arrowPosition: 'bottomCenter',
+  hasCloseButton: false,
+  hasCancelLink: false,
+  style: {},
+  open: false,
+  toggable: true,
+  closeOnOutsideClick: true,
+  onClose: undefined
+});
+
 ;
 /* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_onclickoutside__["a" /* default */])(Popover));
-
 
 /***/ }),
 /* 192 */
@@ -22750,7 +22906,7 @@ var Popover = /** @class */ (function (_super) {
 "use strict";
 /* unused harmony export IGNORE_CLASS_NAME */
 /* harmony export (immutable) */ __webpack_exports__["a"] = onClickOutsideHOC;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
@@ -23079,69 +23235,88 @@ function generateOutsideCheck(componentNode, eventHandler, ignoreClass, excludeS
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__config__ = __webpack_require__(50);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var TransformCalculator = /** @class */ (function () {
-    function TransformCalculator(arrowPosition, container) {
-        var _this = this;
-        // Can't use css calc() here because it does not work poperly inside translate() in IE
-        this.translateX = function () {
-            return "translateX(" + _this.targetTranslateX() + ") translateX(" + _this.containerTranslateX() + "px)";
-        };
-        // Can't use css calc() here because it does not work poperly inside translate() in IE
-        this.translateY = function () {
-            return "translateY(" + _this.targetTranslateY() + ") translateY(" + _this.containerTranslateY() + "px)";
-        };
-        this.containerTranslateX = function () {
-            switch (_this.arrowPosition) {
-                case 'topCenter':
-                case 'topRight':
-                case 'topLeft':
-                case 'bottomCenter':
-                case 'bottomRight':
-                case 'bottomLeft':
-                    return _this.container.clientWidth / 2;
-                case 'leftTop':
-                case 'leftCenter':
-                case 'leftBottom':
-                    return _this.container.clientWidth;
-                case 'rightTop':
-                case 'rightCenter':
-                case 'rightBottom':
-                    return 0;
-                default:
-                    return 0;
-            }
-        };
-        this.containerTranslateY = function () {
-            switch (_this.arrowPosition) {
-                case 'topCenter':
-                case 'topLeft':
-                case 'topRight':
-                    return _this.container.clientHeight;
-                case 'leftCenter':
-                case 'rightCenter':
-                    return -_this.container.clientHeight;
-                case 'leftTop':
-                case 'leftBottom':
-                case 'rightTop':
-                case 'rightBottom':
-                default:
-                    return 0;
-            }
-        };
-        this.targetTranslateX = function () {
-            return __WEBPACK_IMPORTED_MODULE_0__config__["b" /* default */].left[_this.arrowPosition];
-        };
-        this.targetTranslateY = function () {
-            return __WEBPACK_IMPORTED_MODULE_0__config__["b" /* default */].top[_this.arrowPosition];
-        };
-        this.arrowPosition = arrowPosition;
-        this.container = container;
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var TransformCalculator = function TransformCalculator(arrowPosition, container) {
+  var _this = this;
+
+  _classCallCheck(this, TransformCalculator);
+
+  _defineProperty(this, "arrowPosition", void 0);
+
+  _defineProperty(this, "container", void 0);
+
+  _defineProperty(this, "translateX", function () {
+    return "translateX(".concat(_this.targetTranslateX(), ") translateX(").concat(_this.containerTranslateX(), "px)");
+  });
+
+  _defineProperty(this, "translateY", function () {
+    return "translateY(".concat(_this.targetTranslateY(), ") translateY(").concat(_this.containerTranslateY(), "px)");
+  });
+
+  _defineProperty(this, "containerTranslateX", function () {
+    switch (_this.arrowPosition) {
+      case 'topCenter':
+      case 'topRight':
+      case 'topLeft':
+      case 'bottomCenter':
+      case 'bottomRight':
+      case 'bottomLeft':
+        return _this.container.clientWidth / 2;
+
+      case 'leftTop':
+      case 'leftCenter':
+      case 'leftBottom':
+        return _this.container.clientWidth;
+
+      case 'rightTop':
+      case 'rightCenter':
+      case 'rightBottom':
+        return 0;
+
+      default:
+        return 0;
     }
-    return TransformCalculator;
-}());
-/* harmony default export */ __webpack_exports__["a"] = (TransformCalculator);
+  });
 
+  _defineProperty(this, "containerTranslateY", function () {
+    switch (_this.arrowPosition) {
+      case 'topCenter':
+      case 'topLeft':
+      case 'topRight':
+        return _this.container.clientHeight;
+
+      case 'leftCenter':
+      case 'rightCenter':
+        return -_this.container.clientHeight;
+
+      case 'leftTop':
+      case 'leftBottom':
+      case 'rightTop':
+      case 'rightBottom':
+      default:
+        return 0;
+    }
+  });
+
+  _defineProperty(this, "targetTranslateX", function () {
+    return __WEBPACK_IMPORTED_MODULE_0__config__["b" /* default */].left[_this.arrowPosition];
+  });
+
+  _defineProperty(this, "targetTranslateY", function () {
+    return __WEBPACK_IMPORTED_MODULE_0__config__["b" /* default */].top[_this.arrowPosition];
+  });
+
+  this.arrowPosition = arrowPosition;
+  this.container = container;
+} // Can't use css calc() here because it does not work poperly inside translate() in IE
+;
+
+/* harmony default export */ __webpack_exports__["a"] = (TransformCalculator);
 
 /***/ })
 /******/ ]);
